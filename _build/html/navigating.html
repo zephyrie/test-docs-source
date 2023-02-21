@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Toolkit Navigation &#8212; MONAI Toolkit Documentation 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Additional Resources" href="additionalresources.html" />
+    <link rel="prev" title="Quickstart Guide" href="quickstart.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="toolkit-navigation">
+<h1>Toolkit Navigation<a class="headerlink" href="#toolkit-navigation" title="Permalink to this heading">¶</a></h1>
+<section id="module-overview">
+<h2>Module Overview<a class="headerlink" href="#module-overview" title="Permalink to this heading">¶</a></h2>
+<p>We recommend going sequentially through each chapter and focusing on the specific types of tasks that you’re interested in (e.g., Radiology, Pathology, or Computer-Assisted Intervention).</p>
+<p>For additional information on setting up your environment and using the MONAI Toolkit, check out <strong>Chapter 1: Getting Started</strong>.</p>
+<p>If you are at the start of your journey and looking to understand how to speed up your image annotation process, check out <strong>Chapter 2: Using MONAI Label</strong>.</p>
+<p>If you already have an annotated dataset and want to get started training with MONAI or integrate MONAI into your existing PyTorch Training Loop, take a <strong>Chapter 3: Using MONAI Core</strong>.</p>
+<p>If you are interested in MONAI and Federated Learning working together, look at <strong>Chapter 4: MONAI Federated Learning</strong>.</p>
+<p>If you are interested in some advanced topics and looking to compare benchmarks, interested in performance profiling, or looking for some researcher best practices with MONAI, check out <strong>Chapter 5: Performance and Benchmarking</strong>.</p>
+</section>
+<section id="module-1-getting-started">
+<h2>Module 1. Getting Started<a class="headerlink" href="#module-1-getting-started" title="Permalink to this heading">¶</a></h2>
+<p>Getting started with the MONAI Toolkit walks you through the various options you have when launching the Toolkit Container.</p>
+<ul class="simple">
+<li><p>Overview of MONAI Toolkit</p></li>
+<li><p>Installation Prerequisites</p></li>
+<li><p>Running the MONAI Toolkit - Jupyter Lab</p></li>
+<li><p>Running the MONAI Toolkit - Interactive Bash</p></li>
+<li><p>Changing Shared Memory Segment Size</p></li>
+<li><p>Access Jupyter Lab Remotely</p></li>
+<li><p>Mount Custom Data Directory</p></li>
+</ul>
+</section>
+<section id="module-2-using-monai-label">
+<h2>Module 2. Using MONAI Label<a class="headerlink" href="#module-2-using-monai-label" title="Permalink to this heading">¶</a></h2>
+<p>MONAI Label is an intelligent open-source image labeling and learning tool that enables users to create annotated datasets and build AI annotation models for clinical evaluation.</p>
+<p>MONAI Toolkit contains the MONAI Label and provides a plug-and-play environment for users. With a one-step setup of client viewers, MONAI Label allows researchers and developers to benefit from an interactive AI-Assisted labeling experience, including tutorials for different labeling scenarios.</p>
+<ul class="simple">
+<li><p>MONAI Label for Radiology</p></li>
+<li><p>MONAI Label for Endoscopy</p></li>
+<li><p>MONAI Label for Pathology</p></li>
+<li><p>Bring your own Data</p></li>
+<li><p>Create your own Application</p></li>
+</ul>
+</section>
+<section id="module-3-using-monai-core">
+<h2>Module 3. Using MONAI Core<a class="headerlink" href="#module-3-using-monai-core" title="Permalink to this heading">¶</a></h2>
+<p>MONAI Core is the flagship library of Project MONAI that provides domain-specific capabilities for training AI models for healthcare imaging. It gives developers and researchers a PyTorch-driven library for deep learning tasks that includes everything they need to develop medical imaging training workflows.</p>
+<p>MONAI Toolkit contains tutorials that will guide you through the various functions of MONAI Core, starting from the basics of I/O, Transforms, and Datasets. Then you’ll learn more about complex tasks like Self-Supervised Learning and Auto3DSeg, and you’ll find a gallery of tutorials covering technical topics like 3D segmentation, detection, registration, and reconstruction.</p>
+<ul class="simple">
+<li><p>Getting Started with MONAI-Core</p></li>
+<li><p>Customize Bundle Models and Datasets</p></li>
+<li><p>Auto3DSeg</p></li>
+<li><p>Self-Supervised Learning (SSL)</p></li>
+<li><dl class="simple">
+<dt>Other MONAI-Core Application</dt><dd><ul>
+<li><p>Radiology</p></li>
+<li><p>Pathology</p></li>
+<li><p>Computer-Assited Intervention (CAI)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="module-4-monai-federated-learning">
+<h2>Module 4. MONAI Federated Learning<a class="headerlink" href="#module-4-monai-federated-learning" title="Permalink to this heading">¶</a></h2>
+<p>MONAI includes the federated learning (FL) client algorithm APIs that are exposed as an abstract base class for defining an algorithm to be run on any FL platform. NVIDIA FLARE, the FL platform developed by NVIDIA, has already built the integration piece with these new APIs.</p>
+<p>MONAI Toolkit contains tutorials that guide you through getting started with MONAI Federated Learning and uses the FLARE FL Simulator to help researchers accelerate the development of federated learning workflows. It then discusses what a Real-world Federated Learning Deployment would look like and provides examples of how one would set up experiments in a real-world deployment.</p>
+<ul class="simple">
+<li><p>Getting started with MONAI Federated Learning (FL)</p></li>
+<li><p>MONAI FL in the Real World</p></li>
+</ul>
+</section>
+<section id="chapter-5-performance-and-benchmarking">
+<h2>Chapter 5. Performance and Benchmarking<a class="headerlink" href="#chapter-5-performance-and-benchmarking" title="Permalink to this heading">¶</a></h2>
+<p>Model training is often time-consuming in deep learning development, especially in medical imaging applications. Even with powerful hardware, workflows often require analysis and tuning for high performance. And using carefully chosen algorithms—such as network architectures, loss functions, and optimizers—can speed up training.</p>
+<p>MONAI Toolkit contains details on performance benchmarking of MONAI Label and MONAI Core. It provides deep learning model training best practices for medical imaging that can improve performance in terms of efficiency and effectiveness and demonstrates how to analyze training pipelines, profile training pipelines, algorithms selection, and methods to optimize GPU utilization.</p>
+<ul class="simple">
+<li><p>MONAI Label Benchmarking</p></li>
+<li><p>MONAI Core Training</p></li>
+<li><p>Performance Optimization</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MONAI Toolkit Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries.html">Toolkit Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Toolkit Navigation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-overview">Module Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-1-getting-started">Module 1. Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-2-using-monai-label">Module 2. Using MONAI Label</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-3-using-monai-core">Module 3. Using MONAI Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-4-monai-federated-learning">Module 4. MONAI Federated Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chapter-5-performance-and-benchmarking">Chapter 5. Performance and Benchmarking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="additionalresources.html">Additional Resources</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="quickstart.html" title="previous chapter">Quickstart Guide</a></li>
+      <li>Next: <a href="additionalresources.html" title="next chapter">Additional Resources</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Michael Zephyr.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/navigating.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

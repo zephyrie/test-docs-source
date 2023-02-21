@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Quickstart Guide &#8212; MONAI Toolkit Documentation 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Toolkit Navigation" href="navigating.html" />
+    <link rel="prev" title="System Requirements" href="requirements.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="quickstart-guide">
+<h1>Quickstart Guide<a class="headerlink" href="#quickstart-guide" title="Permalink to this heading">¶</a></h1>
+<section id="running-the-monai-toolkit-jupyterlab-instance">
+<h2>Running the MONAI Toolkit JupyterLab Instance<a class="headerlink" href="#running-the-monai-toolkit-jupyterlab-instance" title="Permalink to this heading">¶</a></h2>
+<p>To start with a local host system, the MONAI Toolkit JupyterLab instance can be started with a ready-to-open website link with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">gpus</span> <span class="nb">all</span> <span class="o">-</span><span class="n">it</span> <span class="o">--</span><span class="n">rm</span> <span class="o">--</span><span class="n">ipc</span><span class="o">=</span><span class="n">host</span> <span class="o">--</span><span class="n">net</span><span class="o">=</span><span class="n">host</span> <span class="n">nvcr</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">nvidia</span><span class="o">/</span><span class="n">clara</span><span class="o">/</span><span class="n">monai</span><span class="o">-</span><span class="n">toolkit</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">docker</span><span class="o">/</span><span class="n">runtoolkit</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>After the JupyterLab App is started, follow the onscreen instruction and open the URL in a web browser.</p>
+<p><strong>Note:</strong> By default, the container use the host system’s all GPU resources, networking and inter-process communication (IPC) namespace. Multiple notebooks require a large shared memory size for the container to run comprehensive workflows. For more information, please refer to <a class="reference external" href="#1.4-Changing-Shared-Memory-Segment-Size">changing the shared memory segment size</a></p>
+</section>
+<section id="running-the-monai-toolkit-in-interactive-bash">
+<h2>Running the MONAI Toolkit in Interactive Bash<a class="headerlink" href="#running-the-monai-toolkit-in-interactive-bash" title="Permalink to this heading">¶</a></h2>
+<p>To run the MONAI Toolkit container with the bash shell, issue the command below to start the prebuilt container:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span>  <span class="o">--</span><span class="n">gpus</span> <span class="nb">all</span> <span class="o">-</span><span class="n">it</span> <span class="o">--</span><span class="n">rm</span> <span class="o">--</span><span class="n">ipc</span><span class="o">=</span><span class="n">host</span> <span class="o">--</span><span class="n">net</span><span class="o">=</span><span class="n">host</span> \
+            <span class="n">nvcr</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">nvidia</span><span class="o">/</span><span class="n">clara</span><span class="o">/</span><span class="n">monai</span><span class="o">-</span><span class="n">toolkit</span> \
+            <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+</pre></div>
+</div>
+</section>
+<section id="changing-shared-memory-segment-size">
+<h2>Changing Shared Memory Segment Size<a class="headerlink" href="#changing-shared-memory-segment-size" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://developer.nvidia.com/digits">DIGITS</a> uses shared memory to share data between processes. For example, if you use Torch multiprocessing for multi-threaded data loaders, the default shared memory segment size that the container runs with may not be enough. Therefore, you should increase the shared memory size by issuing either:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">ipc</span><span class="o">=</span><span class="n">host</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">shm</span><span class="o">-</span><span class="n">size</span><span class="o">=</span>
+</pre></div>
+</div>
+</section>
+<section id="access-the-jupyterlab-remotely">
+<h2>Access the JupyterLab Remotely<a class="headerlink" href="#access-the-jupyterlab-remotely" title="Permalink to this heading">¶</a></h2>
+<p>Users can access the JupyterLab instance by simply typing the host machine’s URL or IP address in the web browser with the port number (default: 8888). A token may be required to log in for the first time. Users can find the token in the system which hosts the MONAI Toolkit container by looking for the code after <code class="docutils literal notranslate"><span class="pre">/?token=</span></code> on the screen.</p>
+</section>
+<section id="running-the-jupyterlab-instance-on-a-remote-host-machine">
+<h2>Running the JupyterLab Instance on a Remote Host Machine<a class="headerlink" href="#running-the-jupyterlab-instance-on-a-remote-host-machine" title="Permalink to this heading">¶</a></h2>
+<p>JupyterLab is started on port 8888 by default. If the user wants to assign another port, the JupyterLab instance can be started by setting the <code class="docutils literal notranslate"><span class="pre">JUPYTER_PORT</span></code> environment variable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">e</span> <span class="n">JUPYTER_PORT</span><span class="o">=</span><span class="mi">8900</span>
+</pre></div>
+</div>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span>  <span class="o">--</span><span class="n">gpus</span> <span class="nb">all</span> <span class="o">-</span><span class="n">it</span> <span class="o">--</span><span class="n">rm</span> <span class="o">--</span><span class="n">ipc</span><span class="o">=</span><span class="n">host</span> <span class="o">--</span><span class="n">net</span><span class="o">=</span><span class="n">host</span> \
+            <span class="o">-</span><span class="n">e</span> <span class="n">JUPYTER_PORT</span><span class="o">=</span><span class="mi">8900</span> \
+            <span class="n">nvcr</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">nvidia</span><span class="o">/</span><span class="n">clara</span><span class="o">/</span><span class="n">monai</span><span class="o">-</span><span class="n">toolkit</span> \
+            <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">docker</span><span class="o">/</span><span class="n">runtoolkit</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p><strong>Note:</strong> More details about running docker commands are explained in the <a class="reference external" href="https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#runcont">Running A Container</a> chapter in the NVIDIA Containers For Deep Learning Frameworks User’s Guide and specify the registry, repository, and tags.</p>
+</section>
+<section id="mount-custom-data-directory">
+<h2>Mount Custom Data Directory<a class="headerlink" href="#mount-custom-data-directory" title="Permalink to this heading">¶</a></h2>
+<p>To mount a custom data directory, the users can use <code class="docutils literal notranslate"><span class="pre">-v</span></code> to mount the drive(s) and override the default data directory environment variable <code class="docutils literal notranslate"><span class="pre">MONAI_DATA_DIRECTORY</span></code> used by many notebooks. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span>  <span class="o">--</span><span class="n">gpus</span> <span class="nb">all</span> <span class="o">-</span><span class="n">it</span> <span class="o">--</span><span class="n">rm</span> <span class="o">--</span><span class="n">ipc</span><span class="o">=</span><span class="n">host</span> <span class="o">--</span><span class="n">net</span><span class="o">=</span><span class="n">host</span> \
+            <span class="o">-</span><span class="n">v</span> <span class="o">~/</span><span class="n">workspace</span><span class="p">:</span><span class="o">/</span><span class="n">workspace</span> \
+            <span class="o">-</span><span class="n">e</span> <span class="n">MONAI_DATA_DIRECTORY</span><span class="o">=/</span><span class="n">workspace</span><span class="o">/</span><span class="n">data</span> \
+            <span class="n">nvcr</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">nvidia</span><span class="o">/</span><span class="n">clara</span><span class="o">/</span><span class="n">monai</span><span class="o">-</span><span class="n">toolkit</span> \
+            <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">docker</span><span class="o">/</span><span class="n">runtoolkit</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</section>
+<section id="configure-jupyterlab">
+<h2>Configure JupyterLab<a class="headerlink" href="#configure-jupyterlab" title="Permalink to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">/opt/docker/runtoolkit.sh</span></code> provides an entry point for the user to configure Jupyter Lab with the default settings. However, it cannot cover all use scenarios and APIs of Jupyter. The user can run the Jupyter Lab command in the MONAI Toolkit container and configure the instance simply by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">gpus</span> <span class="nb">all</span> <span class="o">-</span><span class="n">it</span> <span class="o">--</span><span class="n">rm</span> <span class="o">--</span><span class="n">ipc</span><span class="o">=</span><span class="n">host</span> <span class="o">--</span><span class="n">net</span><span class="o">=</span><span class="n">host</span> <span class="n">nvcr</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">nvidia</span><span class="o">/</span><span class="n">clara</span><span class="o">/</span><span class="n">monai</span><span class="o">-</span><span class="n">toolkit</span> <span class="n">jupyter</span> <span class="n">lab</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MONAI Toolkit Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries.html">Toolkit Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">System Requirements</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quickstart Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-monai-toolkit-jupyterlab-instance">Running the MONAI Toolkit JupyterLab Instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-monai-toolkit-in-interactive-bash">Running the MONAI Toolkit in Interactive Bash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#changing-shared-memory-segment-size">Changing Shared Memory Segment Size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#access-the-jupyterlab-remotely">Access the JupyterLab Remotely</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-jupyterlab-instance-on-a-remote-host-machine">Running the JupyterLab Instance on a Remote Host Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mount-custom-data-directory">Mount Custom Data Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-jupyterlab">Configure JupyterLab</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigating.html">Toolkit Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additionalresources.html">Additional Resources</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="requirements.html" title="previous chapter">System Requirements</a></li>
+      <li>Next: <a href="navigating.html" title="next chapter">Toolkit Navigation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Michael Zephyr.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/quickstart.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

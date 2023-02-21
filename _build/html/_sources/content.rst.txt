@@ -1,0 +1,26 @@
+Navigating the MONAI Toolkit
+----------------------------
+
+We recommend going sequentially through each chapter and focusing on the
+specific types of tasks that you’re interested in (e.g., Radiology,
+Pathology, or Computer-Assisted Intervention).
+
+For additional information on setting up your environment and using the
+MONAI Toolkit, check out **Chapter 1: Getting Started**.
+
+If you are at the start of your journey and looking to understand how to
+speed up your image annotation process, check out **Chapter 2: Using
+MONAI Label**.
+
+If you already have an annotated dataset and want to get started
+training with MONAI or integrate MONAI into your existing PyTorch
+Training Loop, take a **Chapter 3: Using MONAI Core**.
+
+If you are interested in MONAI and Federated Learning working together,
+look at **Chapter 4: MONAI Federated Learning**.
+
+If you are interested in some advanced topics and looking to compare
+benchmarks, interested in performance profiling, or looking for some
+researcher best practices with MONAI, check out **Chapter 5: Performance
+and Benchmarking**.
+

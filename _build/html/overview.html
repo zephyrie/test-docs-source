@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Introduction &#8212; MONAI Toolkit Documentation 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Toolkit Libraries" href="libraries.html" />
+    <link rel="prev" title="MONAI Toolkit Documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h1>
+<section id="monai-overview">
+<h2>MONAI Overview<a class="headerlink" href="#monai-overview" title="Permalink to this heading">¶</a></h2>
+<p>NVIDIA co-founded Project <a class="reference external" href="https://monai.io/">MONAI</a>, the Medical Open Network for AI, with the world’s leading academic medical centers to establish an inclusive community of AI researchers to develop and exchange best practices for AI in healthcare imaging across academia and enterprise researchers.</p>
+<p><a class="reference external" href="https://monai.io/">MONAI</a> is the domain-specific, open-source Medical AI framework that drives research breakthroughs and accelerates AI into clinical impact. MONAI unlocks the power of medical data to build deep learning models for medical AI workflows. MONAI provides the essential domain-specific tools from data labeling to model training, making it easy to develop, reproduce and standardize medical AI lifecycles.</p>
+</section>
+<section id="monai-enterprise">
+<h2>MONAI Enterprise<a class="headerlink" href="#monai-enterprise" title="Permalink to this heading">¶</a></h2>
+<p><strong>MONAI Enterprise</strong> is NVIDIA’s offering for enterprise-grade use of MONAI with an <a class="reference external" href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise (NVAIE)</a> 3.0 license. MONAI Enterprise on NVAIE 3.0 offers the MONAI Toolkit container, which provides enterprise developers and researchers with a secure, scalable workflow to develop medical imaging AI.</p>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">MONAI Open-Source versus MONAI Toolkit with NVIDIA AI Enterprise</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 74%" />
+<col style="width: 16%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Features</p></th>
+<th class="head"><p>MONAI Open-Source</p></th>
+<th class="head"><p>NVIDIA AI Enterprise</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><strong>Accelerated Tools and High-throughput Workflows</strong></div>
+</div>
+</td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><strong>Community Forum Support</strong></div>
+<div class="line">Submit questions to the MONAI Issues GitHub for Community Support</div>
+</div>
+</td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><strong>Full-stack and Business-critical Support</strong></div>
+<div class="line">Enterprise-grade support for multiple deployment options: bare-metal, containerized, cloud, and more</div>
+</div>
+</td>
+<td></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><strong>Access to NVIDIA Experts</strong></div>
+<div class="line">Guidance on configuration and performance, including access to NVIDIA engineers</div>
+</div>
+</td>
+<td></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><strong>Enterprise Training Services</strong></div>
+<div class="line">Instructor-led workshops and self-paced training for developers, data scientists, and IT professionals</div>
+</div>
+</td>
+<td></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><strong>Security Notifications</strong></div>
+<div class="line">Receive priority notifications of the latest security fixes and maintenance releases</div>
+</div>
+</td>
+<td></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><strong>Support for other NVIDIA Software and SDKs</strong></div>
+<div class="line">NVIDIA AI Enterprise also covers support for many other NVIDIA products, including RAPIDS, TensorRT, and more</div>
+</div>
+</td>
+<td></td>
+<td><p>X</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="monai-toolkit">
+<h2>MONAI Toolkit<a class="headerlink" href="#monai-toolkit" title="Permalink to this heading">¶</a></h2>
+<p><strong>MONAI Toolkit</strong> is a development sandbox offered as part of MONAI Enterprise, an NVIDIA AI Enterprise-supported distribution of MONAI. It includes a base container and a curated library of 9 pre-trained models (CT, MR, Pathology, Endoscopy), available on <a class="reference external" href="https://ngc.nvidia.com/">NGC</a>, that allows data scientists and clinical researchers to jumpstart AI development. The base container includes the following:</p>
+<ul class="simple">
+<li><p>MONAI Label: An intelligent labeling and learning tool with active learning that reduces data labeling costs by 75%</p></li>
+<li><p>MONAI Core: A training framework to build robust AI models with self-supervised learning, federated learning, and Auto3D segmentation.
+-  With federated learning, APIs algorithms built with NVIDIA FLARE, MONAI can run on any federated learning platform.
+-  Auto3DSeg is domain-specialized AutoML for 3D segmentation, accelerating the development of medical imaging models and maximizing researcher productivity and throughput. Developers can get started with 1-5 lines of code, reducing training time from weeks/months to 2 days.</p></li>
+<li><p>MONAI Model Zoo: A curated library of 9 pre-trained models (CT, MR, Pathology, Endoscopy) that allows data scientists and clinical researchers to jumpstart AI development</p></li>
+<li><p>Curated Jupyter notebooks and tutorial resources to ease the onboarding process.</p></li>
+</ul>
+</section>
+<section id="who-is-this-toolkit-for">
+<h2>Who is this toolkit for?<a class="headerlink" href="#who-is-this-toolkit-for" title="Permalink to this heading">¶</a></h2>
+<section id="researcher">
+<h3>Researcher<a class="headerlink" href="#researcher" title="Permalink to this heading">¶</a></h3>
+<p>A Deep Learning Researcher’s role is to build novel domain-specific models and techniques to drive AI-powered acceleration for workflows or products. MONAI allows researchers to utilize standard building blocks to focus on creating their state-of-the-art AI models.</p>
+</section>
+<section id="data-scientist">
+<h3>Data Scientist<a class="headerlink" href="#data-scientist" title="Permalink to this heading">¶</a></h3>
+<p>A Data Scientist is a user/consumer of a research pipeline. The data scientist’s role is to adapt existing state-of-the-art domain techniques for specific data and use cases. They’ll refine and fine-tune the data science pipeline to fit the clinical workflow/application needed. MONAI aims to be easily integrated into existing pipelines, whether you
+already have a PyTorch workflow or you’re just getting started on your task.</p>
+</section>
+<section id="application-developer">
+<h3>Application Developer<a class="headerlink" href="#application-developer" title="Permalink to this heading">¶</a></h3>
+<p>A platform developer aims to build a platform and service leveraging MONAI components that may include: - A labeling or active learning platform using MONAI Label - A complete ML platform for data scientists, integrated with data stores for data flow management with MONAI Label and Core.</p>
+</section>
+<section id="it-admin">
+<h3>IT Admin<a class="headerlink" href="#it-admin" title="Permalink to this heading">¶</a></h3>
+<p>An IT admin’s role is to provision and configure systems to stand up the MONAI Toolkit sandbox to serve an enterprise’s data science and research teams. The toolkit provides the perfect base for those teams to get started quickly with guided tutorials and validated workflows.</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MONAI Toolkit Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#monai-overview">MONAI Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#monai-enterprise">MONAI Enterprise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#monai-toolkit">MONAI Toolkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#who-is-this-toolkit-for">Who is this toolkit for?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#researcher">Researcher</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-scientist">Data Scientist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#application-developer">Application Developer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#it-admin">IT Admin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="libraries.html">Toolkit Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="navigating.html">Toolkit Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additionalresources.html">Additional Resources</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">MONAI Toolkit Documentation</a></li>
+      <li>Next: <a href="libraries.html" title="next chapter">Toolkit Libraries</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Michael Zephyr.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/overview.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
