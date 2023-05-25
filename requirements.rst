@@ -12,11 +12,7 @@ Using the `MONAI Toolkit Container <https://catalog.ngc.nvidia.com/orgs/nvidia/t
 *  `NVIDIA GPU Drivers <https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html>`__
 *  `NVIDIA Container Toolkit <https://github.com/NVIDIA/nvidia-docker>`__
 
-The MONAI Toolkit 1.0 is based on the `NVIDIA PyTorch container <https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch>`__ release 22.09. The embedded CUDA 11.8.0 requires NVIDIA Driver release 520 or later. However, if you are running on a data center GPU (for example, T4 or any other data center GPU), you can use NVIDIA driver release 450.51 (or later R450), 470.57 (or later R470), 510.47 (or later R510), or 515.65 (or later R515). 
-
-The CUDA driver's compatibility package only supports particular drivers. Thus, users should upgrade from all R418, R440, and R460 drivers, which are not forward-compatible with CUDA 11.8
-
-No other installation, compilation, or dependency management is required. It is not necessary to install the NVIDIA CUDA Toolkit.
+The MONAI Toolkit 1.1 is based on the `NVIDIA PyTorch container <https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch>`__ release 23.03. Release 23.03 is based on CUDA 12.1.0, which requires NVIDIA Driver release 530 or later. However, if you are running on a data center GPU (for example, T4 or any other data center GPU), you can use NVIDIA driver release 450.51 (or later R450), 470.57 (or later R470), 510.47 (or later R510), 515.65 (or later R515), 525.85 (or later R525), or 530.30 (or later R530). The CUDA driver’s compatibility package only supports particular drivers. Thus, users should upgrade from all R418, R440, R460, and R520 drivers, which are not forward-compatible with CUDA 12.1.
 
 For a full list of supported software and specific versions that come packaged with the frameworks based on the container image, see the `Framework Containers Support Matrix <https://docs.nvidia.com/deeplearning/frameworks/support-matrix/index.html>`__ and the `NVIDIA Container Toolkit Documentation <https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html>`__.
 

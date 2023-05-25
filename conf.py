@@ -20,13 +20,13 @@
 # -- Project information -----------------------------------------------------
 
 project = 'MONAI Toolkit Documentation'
-copyright = '2022, Michael Zephyr'
+copyright = '2023, Michael Zephyr'
 author = 'Michael Zephyr'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '1.0'
+release = '1.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -89,7 +89,7 @@ html_static_path = ['_static']
 
 html_css_files = [
     #'css/theme.css',
-    #'css/custom.css'
+    'css/custom.css'
 ]
 
 # Custom sidebar templates, must be a dictionary that maps document names

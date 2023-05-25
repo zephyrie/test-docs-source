@@ -10,7 +10,8 @@ To start with a local host system, the MONAI Toolkit JupyterLab instance can be 
 
 ::
 
-   docker run --gpus all -it --rm --ipc=host --net=host nvcr.io/nvidia/clara/monai-toolkit /opt/docker/runtoolkit.sh
+   docker run --gpus all -it --rm --ipc=host --net=host nvcr.io/nvidia/clara/monai-toolkit:1.1
+
 
 After the JupyterLab App is started, follow the onscreen instruction and open the URL in a web browser.
 
@@ -25,25 +26,27 @@ To run the MONAI Toolkit container with the bash shell, issue the command below 
 ::
 
    docker run  --gpus all -it --rm --ipc=host --net=host \
-               nvcr.io/nvidia/clara/monai-toolkit \
+               nvcr.io/nvidia/clara/monai-toolkit:1.1 \
                /bin/bash
 
 ************************************************
 Changing Shared Memory Segment Size
 ************************************************
 
-`DIGITS <https://developer.nvidia.com/digits>`__ uses shared memory to share data between processes. For example, if you use Torch multiprocessing for multi-threaded data loaders, the default shared memory segment size that the container runs with may not be enough. Therefore, you should increase the shared memory size by issuing either:
+If you use Torch multiprocessing for multi-threaded data loaders, the default shared memory segment size that the container runs with may not be enough. To address this, you can increase the shared memory size by using one of the following options:
+
+1. Use the `--ipc=host` flag when running your container.
+2. Use the `--shm-size=` flag followed by the desired size of the shared memory segment.
+
+For example, to increase the shared memory segment size to 16GB, you can issue the following command:
 
 ::
 
-   --ipc=host
+   docker run --gpus all -it --rm --ipc=host --net=host --shm-size=16g \
+               nvcr.io/nvidia/clara/monai-toolkit:1.1 \
+               /bin/bash
 
-or
-
-::
-
-   --shm-size=
-
+By increasing the shared memory size, you can avoid issues such as “OSError: [Errno 12] Cannot allocate memory” when using multi-threaded data loaders in Torch.
 
 ************************************************
 Access the JupyterLab Remotely
@@ -68,7 +71,7 @@ For example:
 
    docker run  --gpus all -it --rm --ipc=host --net=host \
                -e JUPYTER_PORT=8900 \
-               nvcr.io/nvidia/clara/monai-toolkit \
+               nvcr.io/nvidia/clara/monai-toolkit:1.1 \
                /opt/docker/runtoolkit.sh
 
 **Note:** More details about running docker commands are explained in the `Running A Container <https://docs.nvidia.com/deeplearning/frameworks/user-guide/index.html#runcont>`__ chapter in the NVIDIA Containers For Deep Learning Frameworks User’s Guide and specify the registry, repository, and tags.
@@ -84,7 +87,7 @@ To mount a custom data directory, the users can use ``-v`` to mount the drive(s)
    docker run  --gpus all -it --rm --ipc=host --net=host \
                -v ~/workspace:/workspace \
                -e MONAI_DATA_DIRECTORY=/workspace/data \
-               nvcr.io/nvidia/clara/monai-toolkit \
+               nvcr.io/nvidia/clara/monai-toolkit:1.1 \
                /opt/docker/runtoolkit.sh
 
 *************************

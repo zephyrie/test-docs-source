@@ -18,7 +18,7 @@ Social
 *  `MONAI Medium <https://monai.medium.com/>`_
 
 ======================
-MONAI Documentation
+MONAI Docs
 ======================
 
 *  `MONAI Core Docs <https://docs.monai.io/en/stable/>`__
@@ -28,5 +28,5 @@ MONAI Documentation
 NVIDIA
 ***********
 
-*  `NVIDIA Flare Documentation <https://nvflare.readthedocs.io/en/main/index.html>`_
+*  `NVIDIA Flare Docs <https://nvflare.readthedocs.io/en/main/index.html>`_
 *  `NVIDIA AI Enterprise (NVAIE) <https://www.nvidia.com/en-us/data-center/products/ai-enterprise/>`_
