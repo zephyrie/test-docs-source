@@ -57,11 +57,11 @@ Pre-trained Models
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | `monai_spleen_ct_segmentation <https://catalog.ngc.nvidia.com/orgs/nvidia/teams/monaitoolkit/models/monai_spleen_ct_segmentation>`_                                              |
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `monai_spleen_deepedit_annotation <https://registry.ngc.nvidia.com/orgs/nvstaging/teams/monaitoolkit/models/monai_spleen_deepedit_annotation>`_                                  |
+| `monai_spleen_deepedit_annotation <https://registry.ngc.nvidia.com/orgs/nvidia/teams/monaitoolkit/models/monai_spleen_deepedit_annotation>`_                                  |
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | `monai_swin_unetr_btcv_segmentation <https://catalog.ngc.nvidia.com/orgs/nvidia/teams/monaitoolkit/models/monai_swin_unetr_btcv_segmentation>`_                                  |
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| `monai_wholeBody_ct_segmentation <https://registry.ngc.nvidia.com/orgs/nvstaging/teams/monaitoolkit/models/monai_wholebody_ct_segmentation>`_                                    |
+| `monai_wholeBody_ct_segmentation <https://registry.ngc.nvidia.com/orgs/nvidia/teams/monaitoolkit/models/monai_wholebody_ct_segmentation>`_                                    |
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
